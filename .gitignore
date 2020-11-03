@@ -14,3 +14,4 @@ generated/*
 !generated/*.in
 cmake_install.cmake
 bgfx-install/
+.vs/
