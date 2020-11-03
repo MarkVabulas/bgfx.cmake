@@ -13,6 +13,7 @@ if( TARGET glslang )
 endif()
 
 file( GLOB GLSLANG_SOURCES
+	${BGFX_DIR}/3rdparty/glslang/glslang/HLSL/*.cpp
 	${BGFX_DIR}/3rdparty/glslang/glslang/GenericCodeGen/*.cpp
 	${BGFX_DIR}/3rdparty/glslang/glslang/MachineIndependent/*.cpp
 	${BGFX_DIR}/3rdparty/glslang/glslang/MachineIndependent/preprocessor/*.cpp
