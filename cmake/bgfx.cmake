@@ -81,6 +81,7 @@ endif()
 # Special Visual Studio Flags
 if( MSVC )
 	target_compile_definitions( bgfx PRIVATE "_CRT_SECURE_NO_WARNINGS" )
+	target_compile_definitions( bgfx PRIVATE "/Zc:__cplusplus" )
 endif()
 
 # Includes

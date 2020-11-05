@@ -31,6 +31,12 @@ file( GLOB BIMG_SOURCES ${BIMG_DIR}/src/*.cpp )
 # Create the bimg target
 add_library( bimg STATIC ${BIMG_SOURCES} )
 
+# Special Visual Studio Flags
+if( MSVC )
+	target_compile_definitions( bimg PRIVATE "_CRT_SECURE_NO_WARNINGS" )
+	target_compile_definitions( bimg PRIVATE "/Zc:__cplusplus" )
+endif()
+
 # Add include directory of bimg
 target_include_directories( bimg
 	PUBLIC

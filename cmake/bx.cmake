@@ -35,6 +35,12 @@ if( WIN32 )
 	target_link_libraries( bx PUBLIC psapi )
 endif()
 
+# Special Visual Studio Flags
+if( MSVC )
+	target_compile_definitions( bx PRIVATE "_CRT_SECURE_NO_WARNINGS" )
+	target_compile_definitions( bx PRIVATE "/Zc:__cplusplus" )
+endif()
+
 include(GNUInstallDirs)
 
 # Add include directory of bx
